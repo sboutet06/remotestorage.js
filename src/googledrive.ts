@@ -660,15 +660,6 @@ class GoogleDrive {
     // load parent folder listing to propagate / update id cache.
     return this._getFolder(parentPath(path)).then(() => {
       id = this._fileIdCache.get(path);
-      if (!id) {
-        if (path.substr(-1) === '/') {
-          return this._createFolder(path).then(() => {
-            return this._getFileId(path);
-          });
-        } else {
-          return Promise.resolve();
-        }
-      }
       return Promise.resolve(id);
     });
   }
