@@ -222,12 +222,12 @@ class WireClient {
       if (settings) {
         setTimeout(() => {
           this.configure(settings);
-        }, 0);
+        }, 100);
       }
     }
 
     if (this.connected) {
-      setTimeout(this._emit.bind(this), 0, 'connected');
+      setTimeout(this._emit.bind(this), 100, 'connected');
     }
   }
 

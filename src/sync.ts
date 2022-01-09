@@ -946,7 +946,7 @@ class Sync {
             // Use a 10ms timeout to let the JavaScript runtime catch its breath
             // (and hopefully force an IndexedDB auto-commit?), and also to cause
             // the threads to get staggered and get a good spread over time:
-            setTimeout(() => { this.doTasks(); }, 10);
+            setTimeout(() => { this.doTasks(); }, 100);
           }
         });
       }, err => {

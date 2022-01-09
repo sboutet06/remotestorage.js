@@ -169,7 +169,7 @@ const Features = {
   featureDone () {
     this.featuresDone++;
     if (this.featuresDone === Object.keys(this.featureModules).length) {
-      setTimeout(this.featuresLoaded.bind(this), 0);
+      setTimeout(this.featuresLoaded.bind(this), 100);
     }
   },
 
