@@ -175,25 +175,21 @@ class RemoteStorage {
         // event has happened already
         switch(eventName) {
           case 'features-loaded':
-            //setTimeout(handler, 0);
-            handler()
+            setTimeout(handler, 100);
             break;
           case 'ready':
             if (this.remote) {
-              //setTimeout(handler, 0);
-              handler()
+              setTimeout(handler, 100);
             }
             break;
           case 'connected':
             if (this.remote && this.remote.connected) {
-              //setTimeout(handler, 0);
-              handler()
+              setTimeout(handler, 100);
             }
             break;
           case 'not-connected':
             if (this.remote && !this.remote.connected) {
-              //setTimeout(handler, 0);
-              handler()
+              setTimeout(handler, 100);
             }
             break;
         }
